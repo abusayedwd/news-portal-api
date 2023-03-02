@@ -6,9 +6,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>News portal</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/e3c757713c.js" crossorigin="anonymous"></script>
   </head>
 </head>
-<body onload="newsCategory()">
+<body class="bg-success-subtle" onload="newsCategory()">
        <header class="container-fluid m-0 p-0">
         <nav class="navbar navbar-expand-lg bg-transparent">
                 <div class="container">
@@ -34,7 +35,7 @@
                       <a class="nav-link active" aria-current="page" href="#">News</a>
                       <a class="nav-link" href="#">Blogs</a>
                       <a class="nav-link" href="#"
-                        ><img src="./assets/Avatar.png" alt=""
+                        ><img  src="./assets/Avatar.png" alt=""
                       /></a>
                     </div>
                   </div>
@@ -48,10 +49,69 @@
        </header> 
        <main>
         <!-- main section start  -->
-        <section class="alert container">
+        <section class="alert container w-75">
                 <div class="alert alert-light" role="alert">
-                    category <span id="news-category">Entertainment</span>
+                        <span id="category-count">0</span> items found for category <span id="news-category">Entertainment</span>
                       </div>
+        </section>
+        <section class="container justify-content-between d-flex justify-items-center">
+                <div class="d-flex justify-items-center gap-2">
+                       <div >
+                        <p>Sort By : </p>
+                       </div>
+                       <div >
+                        <select class="form-select form-select-sm" >
+                                <option selected>Defaul</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                              </select>
+                       </div>
+
+                </div>
+                <div class="d-flex justify-items-center gap-2">
+                        <button class="btn btn-primary">Todays Pick</button>
+                        <button onclick="trendingNews()" class="btn btn-warning">Trending</button>
+                </div>
+        </section>
+        <section class="all-news mt-5 container" id="all-news">
+                <div class="card mb-3 " style=" height: 300px;">
+                        <div class="row g-0">
+                          <div class="col-md-4">
+                            <img src="..." class="img-fluid rounded-start" alt="...">
+                          </div>
+                          <div class="col-md-8">
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+        </section>
+        <!-- modal section show -->
+        <section>
+                 
+      
+      <!-- Modal -->
+      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div id="modal-body" class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
         </section>
         <!-- main section end -->
        </main>
