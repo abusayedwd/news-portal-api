@@ -73,7 +73,7 @@ const allNewsShow = (data, category_name) => {
           </div>
           
           <div>
-          <p class = "m-0 p-0"> ${author.name}</p>
+          <p class = "m-0 p-0"> ${author.name? author.name : "hilari mac"}</p>
           <p class = "m-0 p-0">${author.published_date}</p>
           </div>
           </div>
@@ -82,7 +82,7 @@ const allNewsShow = (data, category_name) => {
           <div class = "d-flex gap-1 align-items-center">
           
           <p><i class = "fas fa-eye"></i></p>
-          <p> ${total_view}</p>
+          <p> ${total_view ? total_view : "33"}</p>
           </div>
           
           
@@ -161,7 +161,7 @@ const  {image_url,title, details, author, total_view,_id ,others_info} =  showNe
           </div>
           
           <div>
-          <p class = "m-0 p-0"> ${author.name}</p>
+          <p class = "m-0 p-0"> ${author.name ? author.name : "jhson hell"}</p>
           <p class = "m-0 p-0">${author.published_date}</p>
           </div>
           </div>
@@ -170,7 +170,7 @@ const  {image_url,title, details, author, total_view,_id ,others_info} =  showNe
           <div class = "d-flex gap-1 align-items-center">
           
           <p><i class = "fas fa-eye"></i></p>
-          <p> ${total_view}</p>
+          <p> ${total_view ? total_view : "324"}</p>
           </div>
           
           
